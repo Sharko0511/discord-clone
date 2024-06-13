@@ -23,7 +23,6 @@ export const InviteModal = () => {
   const origin = useOrigin();
 
   const isModalOpen = isOpen && type === "invite";
-  const { server } = data;
 
   const [isLoading, setIsLoading] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -51,6 +50,8 @@ export const InviteModal = () => {
   setTimeout(() => {
     setCopied(false);
   }, 1000);
+
+  const server = data?.server;
 
   const inviteUrl = `${origin}/invite/${server?.inviteCode}`;
 

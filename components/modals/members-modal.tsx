@@ -47,6 +47,10 @@ export const MembersModal = () => {
   const [loadingId, setLoadingId] = useState("");
 
   const isModalOpen = isOpen && type === "members";
+
+  if (!data || !data.server) {
+    return
+  }
   const { server } = data as { server: ServerWithMemberWithProfile };
 
   const roleIconMap = {
