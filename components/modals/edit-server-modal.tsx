@@ -42,7 +42,7 @@ export const EditServerModal = () => {
   const router = useRouter();
 
   const isModalOpen = isOpen && type === "editServer";
-  const { server } = data;
+
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -51,6 +51,8 @@ export const EditServerModal = () => {
       imageUrl: "",
     },
   });
+
+  const server = data?.server;
 
   useEffect(() => {
     if (server) {
@@ -77,7 +79,6 @@ export const EditServerModal = () => {
     form.reset();
     onClose();
   };
-
   return (
     <Dialog open={isModalOpen} onOpenChange={handleClose}>
       <DialogContent className="bg-white text-black p-0 overflow-hidden">
