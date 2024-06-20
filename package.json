@@ -51,5 +51,8 @@
   "devDependencies": {
     "@types/uuid": "9.0.8",
     "prisma": "5.13.0"
+  },
+  "volta": {
+    "node": "20.14.0"
   }
 }
