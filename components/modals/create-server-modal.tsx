@@ -36,7 +36,7 @@ const formSchema = z.object({
   }),
 });
 
-export const CreatServerModal = () => {
+export const CreateServerModal = () => {
   const { isOpen, onClose, type } = useModal();
   const router = useRouter();
 
